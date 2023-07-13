@@ -10,13 +10,13 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: "12 */1 * * *"
+    - cron: '12 */3 * * *'
   watch:
     types: [started]
    
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
     steps:
     - name: Checkout
